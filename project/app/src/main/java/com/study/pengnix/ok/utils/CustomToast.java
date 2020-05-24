@@ -40,4 +40,30 @@ public class CustomToast {
         showToast(mContext, mContext.getResources().getString(resId), duration);
     }
 
+    public void test(){
+//        public void onSuccess(Meta meta, CommentsBean commentsBean) {
+//            if (meta.isSuccess()) {
+//                List<CommentsData> list = commentsBean.getList();
+//                if (list.size() > 0) {
+//                    //发送评论以后页码重置为1
+//                    if (page == -1) {
+//                        pageNo = 1;
+//                        adapter.clear();
+//                    }
+//                    adapter.addAll(list);
+//                } else if (adapter.getCount() <= 0)
+//                    easy.showEmpty();
+//
+//                //判断评论总数，加载完毕显示没有更多
+//                int totalNum = Integer.parseInt(commentsBean.getTotalNum());
+//                tvCommentNum.setText(commentsBean.getTotalNumStr());
+//                if (adapter.getCount() >= totalNum) {
+//                    adapter.stopMore();
+//                }
+//            } else {
+//                easy.showError();
+//            }
+//        }
+    }
+
 }
