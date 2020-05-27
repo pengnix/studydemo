@@ -11,4 +11,5 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="jump_to_coordinator_layout">coordinator</string>
     <string name="jump_to_collapsing_toolbar_layout">collapsingToolbar</string>
+    <string name="jump_to_constraint_layout">constraintLayout</string>
 </resources>

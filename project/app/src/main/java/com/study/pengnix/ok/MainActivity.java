@@ -6,6 +6,7 @@ import android.os.Bundle;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.study.pengnix.ok.activity.CollapsingToolbarLayoutDemoActivity;
+import com.study.pengnix.ok.activity.ConstraintLayoutDemoActivity;
 import com.study.pengnix.ok.activity.CoordinatorLayoutDemoActivity;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,6 +24,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         findViewById(R.id.jump2_coordinator_layout_demo).setOnClickListener(this);
         findViewById(R.id.jump2_collapsing_toolbar_layout_demo).setOnClickListener(this);
+        findViewById(R.id.jump2_constraint_layout_demo).setOnClickListener(this);
     }
 
     @Override
@@ -34,6 +36,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.jump2_collapsing_toolbar_layout_demo:
                 intent = new Intent(MainActivity.this, CollapsingToolbarLayoutDemoActivity.class);
+            case R.id.jump2_constraint_layout_demo:
+                intent = new Intent(MainActivity.this, ConstraintLayoutDemoActivity.class);
         }
         startActivity(intent);
     }

@@ -25,6 +25,9 @@
         <activity
             android:name=".activity.CollapsingToolbarLayoutDemoActivity">
         </activity>
+        <activity
+            android:name=".activity.ConstraintLayoutDemoActivity">
+        </activity>
     </application>
 
 </manifest>
