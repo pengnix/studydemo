@@ -6,12 +6,25 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity">
-    <Button
-        android:id="@+id/jump2_coordinator_layout_demo"
-        android:layout_width="wrap_content"
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/jump_to_coordinator_layout"
-        android:layout_marginLeft="50dp"/>
+        android:layout_marginLeft="50dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/jump2_coordinator_layout_demo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/jump_to_coordinator_layout" />
+
+        <Button
+            android:id="@+id/jump2_collapsing_toolbar_layout_demo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/jump_to_collapsing_toolbar_layout" />
+    </LinearLayout>
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

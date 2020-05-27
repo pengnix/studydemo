@@ -5,6 +5,7 @@ import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
+import com.study.pengnix.ok.activity.CollapsingToolbarLayoutDemoActivity;
 import com.study.pengnix.ok.activity.CoordinatorLayoutDemoActivity;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,15 +15,26 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        findViewById(R.id.jump2_coordinator_layout_demo).setOnClickListener(view -> {
-            Intent intent = new Intent(MainActivity.this, CoordinatorLayoutDemoActivity.class);
-            startActivity(intent);
-        });
+        findViewById(R.id.jump2_coordinator_layout_demo).setOnClickListener(this);
+        findViewById(R.id.jump2_collapsing_toolbar_layout_demo).setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View view) {
+        Intent intent = null;
+        switch (view.getId()){
+            case R.id.jump2_coordinator_layout_demo:
+                intent = new Intent(MainActivity.this, CoordinatorLayoutDemoActivity.class);
+                break;
+            case R.id.jump2_collapsing_toolbar_layout_demo:
+                intent = new Intent(MainActivity.this, CollapsingToolbarLayoutDemoActivity.class);
+        }
+        startActivity(intent);
     }
 }

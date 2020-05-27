@@ -22,6 +22,9 @@
         <activity
             android:name=".activity.CoordinatorLayoutDemoActivity">
         </activity>
+        <activity
+            android:name=".activity.CollapsingToolbarLayoutDemoActivity">
+        </activity>
     </application>
 
 </manifest>
