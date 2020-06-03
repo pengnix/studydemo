@@ -31,6 +31,9 @@
         <activity
             android:name=".activity.VideoActivity">
         </activity>
+        <activity
+            android:name=".activity.MediaPlayerActivity">
+        </activity>
     </application>
 
 </manifest>

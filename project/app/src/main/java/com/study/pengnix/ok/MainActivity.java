@@ -8,6 +8,7 @@ import com.google.android.material.snackbar.Snackbar;
 import com.study.pengnix.ok.activity.CollapsingToolbarLayoutDemoActivity;
 import com.study.pengnix.ok.activity.ConstraintLayoutDemoActivity;
 import com.study.pengnix.ok.activity.CoordinatorLayoutDemoActivity;
+import com.study.pengnix.ok.activity.MediaPlayerActivity;
 import com.study.pengnix.ok.activity.VideoActivity;
 
 import androidx.appcompat.app.AppCompatActivity;
