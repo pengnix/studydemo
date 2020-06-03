@@ -29,6 +29,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/jump_to_constraint_layout" />
+        <Button
+            android:id="@+id/jump2_video_layout_demo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/jump_to_video_layout" />
     </LinearLayout>
 
 

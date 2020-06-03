@@ -8,6 +8,7 @@ import com.google.android.material.snackbar.Snackbar;
 import com.study.pengnix.ok.activity.CollapsingToolbarLayoutDemoActivity;
 import com.study.pengnix.ok.activity.ConstraintLayoutDemoActivity;
 import com.study.pengnix.ok.activity.CoordinatorLayoutDemoActivity;
+import com.study.pengnix.ok.activity.VideoActivity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -25,6 +26,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.jump2_coordinator_layout_demo).setOnClickListener(this);
         findViewById(R.id.jump2_collapsing_toolbar_layout_demo).setOnClickListener(this);
         findViewById(R.id.jump2_constraint_layout_demo).setOnClickListener(this);
+        findViewById(R.id.jump2_video_layout_demo).setOnClickListener(this);
     }
 
     @Override
@@ -38,6 +40,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 intent = new Intent(MainActivity.this, CollapsingToolbarLayoutDemoActivity.class);
             case R.id.jump2_constraint_layout_demo:
                 intent = new Intent(MainActivity.this, ConstraintLayoutDemoActivity.class);
+            case R.id.jump2_video_layout_demo:
+                intent = new Intent(MainActivity.this, VideoActivity.class);
         }
         startActivity(intent);
     }
