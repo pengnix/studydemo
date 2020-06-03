@@ -28,7 +28,7 @@ public class VideoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_video_demo);
 
-        Dialog mDialog = CircleProgressDialog.createLoadingDialog(this, "正在加载中...");
+        mDialog = CircleProgressDialog.createLoadingDialog(this);
         mDialog.setCancelable(true);//允许返回
         mDialog.show();//显示
         videoView = findViewById(R.id.album_video);

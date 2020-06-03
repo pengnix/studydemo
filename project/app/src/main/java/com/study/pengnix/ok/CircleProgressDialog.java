@@ -8,19 +8,18 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
 public class CircleProgressDialog {
-    public static Dialog createLoadingDialog(Context context, String msg) {
+    public static Dialog createLoadingDialog(Context context) {
 
         LayoutInflater inflater = LayoutInflater.from(context);
-        View v = inflater.inflate(R.layout.loading_dialog, null);// 得到加载view
+        View v = inflater.inflate(R.layout.video_loading_dialog, null);// 得到加载view
         LinearLayout layout = v.findViewById(R.id.dialog_view);// 加载布局
         // main.xml中的ImageView
         ImageView spaceshipImage = v.findViewById(R.id.img);
         // 加载动画
         Animation hyperspaceJumpAnimation = AnimationUtils.loadAnimation(
-                context, R.anim.load_animation);
+                context, R.anim.video_load_animation);
         // 使用ImageView显示动画
         spaceshipImage.startAnimation(hyperspaceJumpAnimation);
 
