@@ -36,8 +36,6 @@ public class VideoActivity extends AppCompatActivity {
         videoView.setVideoPath(url);
         videoView.setMediaController(mediaController);
         mediaController.setVisibility(View.VISIBLE);
-        videoView.start();
-        mDialog.show();
         videoView.setOnInfoListener((mediaPlayer, i, i1) -> {
             if (i == MediaPlayer.MEDIA_INFO_VIDEO_RENDERING_START) {
                 mDialog.dismiss();
@@ -46,6 +44,8 @@ public class VideoActivity extends AppCompatActivity {
             Log.i(TAG, "listener = " + i);
             return true;
         });
+        videoView.start();
+        mDialog.show();
     }
 
 
