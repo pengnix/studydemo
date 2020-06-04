@@ -15,13 +15,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.study.pengnix.ok.CircleProgressDialog;
 import com.study.pengnix.ok.R;
 import com.study.pengnix.ok.controller.CustomMediaController;
+import com.study.pengnix.ok.view.CustomVideoView;
 
 public class VideoActivity extends AppCompatActivity {
 
-    private VideoView videoView;
+    private CustomVideoView videoView;
     CustomMediaController mediaController ;
     private static String TAG = "VideoActivity";
-    private static String url = "http://yunbanktest.bankcomm.com/hpbc_uat_web/video/20200531/1080_1920_20200531_4e3ead82-aaad-4226-8fe0-c33cde31b4f11.mp4";
+//    private static String url = "http://yunbanktest.bankcomm.com/hpbc_uat_web/video/20200531/1080_1920_20200531_4e3ead82-aaad-4226-8fe0-c33cde31b4f11.mp4";
+    private static String url = "http://yunbanktest.bankcomm.com/hpbc_uat_web/video/20200603/a.mp4";
+
     Dialog mDialog;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
