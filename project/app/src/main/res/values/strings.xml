@@ -13,4 +13,5 @@
     <string name="jump_to_collapsing_toolbar_layout">collapsingToolbar</string>
     <string name="jump_to_constraint_layout">constraintLayout</string>
     <string name="jump_to_video_layout">Video</string>
+    <string name="jump_to_video_download_layout">VideoDownload</string>
 </resources>

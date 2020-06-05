@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.study.pengnix.ok">
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -33,6 +35,9 @@
         </activity>
         <activity
             android:name=".activity.MediaPlayerActivity">
+        </activity>
+        <activity
+            android:name=".activity.VideoShowAfterDownloadActivity">
         </activity>
     </application>
 
