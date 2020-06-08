@@ -229,40 +229,36 @@ public abstract class SecondaryListAdapter<GVH, SVH extends RecyclerView.ViewHol
         int count = 0;
         int i = 0;
 
-        for (i = 0; i < groupItemStatus.size(); i++ ) {
+        for (i = 0; i < groupItemStatus.size(); i++) {
 
             if (count == position) {
 
                 itemStatus.setViewType(ItemStatus.VIEW_TYPE_GROUPITEM);
                 itemStatus.setGroupItemIndex(i);
                 break;
-
+//          pos大于计数时，item为groupItem(i - 1)中的某个subItem
             } else if (count > position) {
 
                 itemStatus.setViewType(ItemStatus.VIEW_TYPE_SUBITEM);
                 itemStatus.setGroupItemIndex(i - 1);
-                itemStatus.setSubItemIndex(position - ( count - dataTrees.get(i - 1).getSubItems
-                        ().size() ) );
+                itemStatus.setSubItemIndex(position - (count - dataTrees.get(i - 1).getSubItems().size()));
                 break;
 
             }
 
             count++;
-
+//          当轮询到的groupItem的状态为“开”的话，count需要加上该groupItem下面的子项目数目
             if (groupItemStatus.get(i)) {
-
                 count += dataTrees.get(i).getSubItems().size();
-
             }
 
 
         }
-
+//      简单地处理当轮询到最后一项groupItem的时候
         if (i >= groupItemStatus.size()) {
             itemStatus.setGroupItemIndex(i - 1);
             itemStatus.setViewType(ItemStatus.VIEW_TYPE_SUBITEM);
-            itemStatus.setSubItemIndex(position - ( count - dataTrees.get(i - 1).getSubItems().size
-                    () ) );
+            itemStatus.setSubItemIndex(position - (count - dataTrees.get(i - 1).getSubItems().size()));
         }
 
         return itemStatus;
