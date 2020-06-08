@@ -37,7 +37,7 @@ public class CommentRecyclerAdapter extends SecondaryListAdapter<CommentRecycler
     @Override
     public RecyclerView.ViewHolder groupItemViewHolder(ViewGroup parent) {
 
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.second_item, parent, false);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.first_item, parent, false);
 
         return new GroupItemViewHolder(v);
     }
