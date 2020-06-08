@@ -21,24 +21,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".activity.CoordinatorLayoutDemoActivity">
-        </activity>
-        <activity
-            android:name=".activity.CollapsingToolbarLayoutDemoActivity">
-        </activity>
-        <activity
-            android:name=".activity.ConstraintLayoutDemoActivity">
-        </activity>
-        <activity
-            android:name=".activity.VideoActivity">
-        </activity>
-        <activity
-            android:name=".activity.MediaPlayerActivity">
-        </activity>
-        <activity
-            android:name=".activity.VideoShowAfterDownloadActivity">
-        </activity>
+        <activity android:name=".activity.CoordinatorLayoutDemoActivity" />
+        <activity android:name=".activity.CollapsingToolbarLayoutDemoActivity" />
+        <activity android:name=".activity.ConstraintLayoutDemoActivity" />
+        <activity android:name=".activity.VideoActivity" />
+        <activity android:name=".activity.MediaPlayerActivity" />
+        <activity android:name=".activity.VideoShowAfterDownloadActivity" />
+        <activity android:name=".activity.SecondListActivity" />
     </application>
 
 </manifest>

@@ -9,6 +9,7 @@ import com.study.pengnix.ok.activity.CollapsingToolbarLayoutDemoActivity;
 import com.study.pengnix.ok.activity.ConstraintLayoutDemoActivity;
 import com.study.pengnix.ok.activity.CoordinatorLayoutDemoActivity;
 import com.study.pengnix.ok.activity.MediaPlayerActivity;
+import com.study.pengnix.ok.activity.SecondListActivity;
 import com.study.pengnix.ok.activity.VideoActivity;
 import com.study.pengnix.ok.activity.VideoShowAfterDownloadActivity;
 
@@ -30,6 +31,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.jump2_constraint_layout_demo).setOnClickListener(this);
         findViewById(R.id.jump2_video_layout_demo).setOnClickListener(this);
         findViewById(R.id.jump2_video_download_layout_demo).setOnClickListener(this);
+        findViewById(R.id.jump2_second_layout_demo).setOnClickListener(this);
     }
 
     @Override
@@ -47,6 +49,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 intent = new Intent(MainActivity.this, VideoActivity.class);
             case R.id.jump2_video_download_layout_demo:
                 intent = new Intent(MainActivity.this, VideoShowAfterDownloadActivity.class);
+            case R.id.jump2_second_layout_demo:
+                intent = new Intent(MainActivity.this, SecondListActivity.class);
         }
         startActivity(intent);
     }
