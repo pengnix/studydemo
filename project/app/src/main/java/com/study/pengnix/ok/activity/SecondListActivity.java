@@ -32,6 +32,7 @@ public class SecondListActivity extends AppCompatActivity {
         rv.addItemDecoration(new RvDividerItemDecoration(this, LinearLayoutManager.VERTICAL));
         setDatas();
         adapter = new CommentRecyclerAdapter(this);
+        adapter.setEmptyView(R.layout.view_comments_empty);
 
         adapter.setData(datas);
         rv.setAdapter(adapter);

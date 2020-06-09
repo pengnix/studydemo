@@ -70,7 +70,7 @@ public abstract class SecondaryListAdapter<GVH, SVH extends RecyclerView.ViewHol
 
 
     @Override
-    public final RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
         RecyclerView.ViewHolder viewHolder = null;
 
@@ -211,7 +211,7 @@ public abstract class SecondaryListAdapter<GVH, SVH extends RecyclerView.ViewHol
 
 
     @Override
-    public final int getItemViewType(int position) {
+    public int getItemViewType(int position) {
         return getItemStatusByPosition(position).getViewType();
     }
 

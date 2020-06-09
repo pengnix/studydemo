@@ -23,6 +23,9 @@ public class CommentRecyclerAdapter extends SecondaryListAdapter<CommentRecycler
 
 
     private Context context;
+    public static final int VIEW_TYPE_EMPTY = 10;
+    int emptyResId = -1;
+
 
     private List<DataTree<String, String>> dts = new ArrayList<>();
 
@@ -36,7 +39,21 @@ public class CommentRecyclerAdapter extends SecondaryListAdapter<CommentRecycler
     }
 
     @Override
+    public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        if (viewType == VIEW_TYPE_EMPTY){
+            View emptyView = LayoutInflater.from(parent.getContext()).inflate(emptyResId, parent, false);
+            return new RecyclerView.ViewHolder(emptyView) {};
+        } else {
+            return super.onCreateViewHolder(parent, viewType);
+        }
+    }
+
+    @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
+        //空布局
+        if(groupItemStatus.size() == 0){
+            return;
+        }
         final ItemStatus itemStatus = getItemStatusByPosition(position);
 
         final DataTree dt = dataTrees.get(itemStatus.getGroupItemIndex());
@@ -133,7 +150,7 @@ public class CommentRecyclerAdapter extends SecondaryListAdapter<CommentRecycler
     public int getItemCount() {
         int itemCount = 0;
         if (groupItemStatus.size() == 0) {
-            return 0;
+            return 1;
         }
         for (int i = 0; i < dataTrees.size(); i++) {
             if (groupItemStatus.get(i)) {
@@ -268,6 +285,10 @@ public class CommentRecyclerAdapter extends SecondaryListAdapter<CommentRecycler
 
     }
 
+    public void setEmptyView(int emptyResId){
+        this.emptyResId = emptyResId;
+    }
+
     public static class GroupItemViewHolder extends RecyclerView.ViewHolder {
 
         TextView tvGroup;
@@ -277,6 +298,15 @@ public class CommentRecyclerAdapter extends SecondaryListAdapter<CommentRecycler
 
            tvGroup = (TextView) itemView.findViewById(R.id.tv);
 
+        }
+    }
+
+    @Override
+    public int getItemViewType(int position) {
+        if (groupItemStatus.size() == 0) {
+            return VIEW_TYPE_EMPTY;
+        } else {
+            return super.getItemViewType(position);
         }
     }
 
