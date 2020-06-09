@@ -12,9 +12,9 @@ import java.util.List;
 public abstract class SecondaryListAdapter<GVH, SVH extends RecyclerView.ViewHolder> extends RecyclerView
         .Adapter<RecyclerView.ViewHolder> {
 
-    private List<Boolean> groupItemStatus = new ArrayList<>();
+    protected List<Boolean> groupItemStatus = new ArrayList<>();
 
-    private List<DataTree> dataTrees = new ArrayList<>();
+    protected List<DataTree> dataTrees = new ArrayList<>();
 
     /**
      * Set new data for adapter to show. It must be called when set new data.
@@ -129,7 +129,7 @@ public abstract class SecondaryListAdapter<GVH, SVH extends RecyclerView.ViewHol
     public abstract void onSubItemClick(SVH holder, int groupItemIndex, int subItemIndex);
 
     @Override
-    public final void onBindViewHolder(final RecyclerView.ViewHolder holder, int position) {
+    public void onBindViewHolder(final RecyclerView.ViewHolder holder, int position) {
 
         final ItemStatus itemStatus = getItemStatusByPosition(position);
 
@@ -187,7 +187,7 @@ public abstract class SecondaryListAdapter<GVH, SVH extends RecyclerView.ViewHol
     }
 
     @Override
-    public final int getItemCount() {
+    public int getItemCount() {
 
         int itemCount = 0;
 
@@ -222,7 +222,7 @@ public abstract class SecondaryListAdapter<GVH, SVH extends RecyclerView.ViewHol
      * @param position Position
      *
      */
-    private ItemStatus getItemStatusByPosition(int position) {
+    protected ItemStatus getItemStatusByPosition(int position) {
 
         ItemStatus itemStatus = new ItemStatus();
 
@@ -266,7 +266,7 @@ public abstract class SecondaryListAdapter<GVH, SVH extends RecyclerView.ViewHol
 
 
 
-    private static class ItemStatus {
+    protected static class ItemStatus {
 
         public static final int VIEW_TYPE_GROUPITEM = 0;
         public static final int VIEW_TYPE_SUBITEM = 1;

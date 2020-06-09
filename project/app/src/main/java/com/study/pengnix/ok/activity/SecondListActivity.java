@@ -39,16 +39,16 @@ public class SecondListActivity extends AppCompatActivity {
 
     void setDatas(){
         for (int i = 0; i < 6; i++) {
-
             datas.add(new SecondaryListAdapter.DataTree<String, String>(String.valueOf(i), new
                     ArrayList<String>(){{add("sub 0"); add("sub 1"); add("sub 2");}}));
-
         }
         datas.add(new SecondaryListAdapter.DataTree<String, String>(String.valueOf(6), new
                 ArrayList<String>()));
         datas.add(new SecondaryListAdapter.DataTree<String, String>(String.valueOf(7), new
                 ArrayList<String>(){{add("sub 0");}}));
         datas.add(new SecondaryListAdapter.DataTree<String, String>(String.valueOf(8), new
+                ArrayList<String>(){{add("sub 0"); add("sub 1"); add("sub 2");}}));
+        datas.add(new SecondaryListAdapter.DataTree<String, String>(String.valueOf(9), new
                 ArrayList<String>(){{add("sub 0"); add("sub 1"); add("sub 2");}}));
     }
 }

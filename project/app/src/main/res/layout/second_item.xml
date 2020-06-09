@@ -14,5 +14,12 @@
         android:text="item"
         android:textSize="18sp"
         />
+    <TextView
+        android:id="@+id/load_more"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="显示更多"
+        android:textSize="14sp"/>
 
 </LinearLayout>
