@@ -43,7 +43,13 @@ public class SecondListActivity extends AppCompatActivity {
             datas.add(new SecondaryListAdapter.DataTree<String, String>(String.valueOf(i), new
                     ArrayList<String>(){{add("sub 0"); add("sub 1"); add("sub 2");}}));
         }
-        datas.add(new SecondaryListAdapter.DataTree<String, String>(String.valueOf(6), new
+        //todo 后面处理一下null的bug
+//        datas.add(new SecondaryListAdapter.DataTree<String, String>(String.valueOf(6), null));
+        datas.add(new SecondaryListAdapter.DataTree<String, String>(String.valueOf(11), new
+                ArrayList<String>()));
+        datas.add(new SecondaryListAdapter.DataTree<String, String>(String.valueOf(12), new
+                ArrayList<String>()));
+        datas.add(new SecondaryListAdapter.DataTree<String, String>(String.valueOf(13), new
                 ArrayList<String>()));
         datas.add(new SecondaryListAdapter.DataTree<String, String>(String.valueOf(7), new
                 ArrayList<String>(){{add("sub 0");}}));

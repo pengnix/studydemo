@@ -31,7 +31,7 @@ public class CoordinatorLayoutDemoActivity extends AppCompatActivity {
 
     private void loadData(){
         List list = new ArrayList<ColorBlock>();
-        for(int i =0;i<20;i++){
+        for(int i =0;i<6;i++){
             list.add(new ColorBlock(String.valueOf(i)));
         }
         adapter = new ColorBlockAdapter(list);
