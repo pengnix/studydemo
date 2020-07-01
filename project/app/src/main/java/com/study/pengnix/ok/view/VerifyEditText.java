@@ -185,11 +185,13 @@ public class VerifyEditText extends LinearLayout {
                     currentPosition = i;
                 }
                 if (!isAllLineLight) {
-                    underlineList.get(i).setBackgroundColor(lineDefaultColor);
+                    if(i<=currentPosition){
+                        underlineList.get(i).setBackgroundColor(lineFocusColor);
+
+                    } else {
+                        underlineList.get(i).setBackgroundColor(lineDefaultColor);
+                    }
                 }
-            }
-            if (!isAllLineLight) {
-                underlineList.get(currentPosition).setBackgroundColor(lineFocusColor);
             }
         };
 
