@@ -44,6 +44,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/jump_to_second_layout" />
+        <Button
+            android:id="@+id/jump2_code_layout_demo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/jump_to_code_layout" />
     </LinearLayout>
 
 

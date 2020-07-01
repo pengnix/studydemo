@@ -15,4 +15,6 @@
     <string name="jump_to_video_layout">Video</string>
     <string name="jump_to_video_download_layout">VideoDownload</string>
     <string name="jump_to_second_layout">Second</string>
+    <string name="jump_to_code_layout">code</string>
+
 </resources>

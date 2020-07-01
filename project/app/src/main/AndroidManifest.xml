@@ -28,6 +28,8 @@
         <activity android:name=".activity.MediaPlayerActivity" />
         <activity android:name=".activity.VideoShowAfterDownloadActivity" />
         <activity android:name=".activity.SecondListActivity" />
+        <activity android:name=".activity.VerficationCodeActivity" />
+
     </application>
 
 </manifest>
