@@ -29,6 +29,7 @@
         <activity android:name=".activity.VideoShowAfterDownloadActivity" />
         <activity android:name=".activity.SecondListActivity" />
         <activity android:name=".activity.VerficationCodeActivity" />
+        <activity android:name=".activity.VerficationCodeActivity2" />
 
     </application>
 

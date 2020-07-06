@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.VerficationCodeActivity">
+
+    <com.study.pengnix.ok.view.VerificationCodeInputView
+        android:id="@+id/et_verify"
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        app:box="6"
+        app:child_height="50dp"
+        app:child_horizontal_padding="16dp"
+        app:child_width="42dp"
+        app:cursor="@drawable/edit_cursor_shape_new"
+        app:input_type="number"
+        app:text_color="@color/color_47555f"
+        app:text_size="28"
+        app:underline_focus_color="#333333"
+        app:underline_height="1dp"
+        app:underline_normal_color="#D8D8D8"
+        app:underline_space="7dp"/>
+
+</LinearLayout>
