@@ -8,6 +8,7 @@ import com.google.android.material.snackbar.Snackbar;
 import com.study.pengnix.ok.activity.CollapsingToolbarLayoutDemoActivity;
 import com.study.pengnix.ok.activity.ConstraintLayoutDemoActivity;
 import com.study.pengnix.ok.activity.CoordinatorLayoutDemoActivity;
+import com.study.pengnix.ok.activity.EditTextActivity;
 import com.study.pengnix.ok.activity.MediaPlayerActivity;
 import com.study.pengnix.ok.activity.SecondListActivity;
 import com.study.pengnix.ok.activity.VerficationCodeActivity;
@@ -36,6 +37,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.jump2_second_layout_demo).setOnClickListener(this);
         findViewById(R.id.jump2_code_layout_demo).setOnClickListener(this);
         findViewById(R.id.jump2_code2_layout_demo).setOnClickListener(this);
+        findViewById(R.id.jump2_edit_text_layout_demo).setOnClickListener(this);
     }
 
     @Override
@@ -65,6 +67,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.jump2_code2_layout_demo:
                 intent = new Intent(MainActivity.this, VerficationCodeActivity2.class);
+                break;
+            case R.id.jump2_edit_text_layout_demo:
+                intent = new Intent(MainActivity.this, EditTextActivity.class);
                 break;
         }
         startActivity(intent);
