@@ -178,6 +178,7 @@ public class VerificationCodeInputView extends ViewGroup {
             params.setMargins(mChildHorizontalPadding, mChildVerticalPadding, mChildHorizontalPadding, mChildVerticalPadding);
             params.gravity = Gravity.CENTER;
 
+            editText.setFocus(i == 0);
             editText.setCursor(mCursor);
             editText.setTextColor(mTextColor);
 //            editText.setTypeface(Typeface.DEFAULT_BOLD);
@@ -211,11 +212,12 @@ public class VerificationCodeInputView extends ViewGroup {
      * 当前焦点的EditText输入后，跳转到下一个空的EditText并设置Focus
      */
     private void focus() {
-        EditText editText;
+        EditTextCustomNew editText;
         for (int i = 0; i < mBox; i++) {
-            editText = (EditText) getChildAt(i);
+            editText = (EditTextCustomNew) getChildAt(i);
             if (editText.getText().length() < 1) {
                 editText.requestFocus();
+                editText.setFocus(true);
                 return;
             }
         }
@@ -228,7 +230,7 @@ public class VerificationCodeInputView extends ViewGroup {
         StringBuilder stringBuilder = new StringBuilder();
         boolean full = true;
         for (int i = 0; i < mBox; i++) {
-            EditText editText = (EditText) getChildAt(i);
+            EditTextCustomNew editText = (EditTextCustomNew) getChildAt(i);
             String content = editText.getText().toString();
             if (content.length() == 0) {
                 full = false;
@@ -254,14 +256,14 @@ public class VerificationCodeInputView extends ViewGroup {
      * @deprecated
      */
     private void toNext(int keyCode) {
-        EditText editText;
-        EditText nextText;
+        EditTextCustomNew editText;
+        EditTextCustomNew nextText;
         for (int i = 0; i < mBox; i++) {
-            editText = (EditText) getChildAt(i);
+            editText = (EditTextCustomNew) getChildAt(i);
             if (editText != null && editText.isFocused() && editText.hasFocus()) {
                 if (editText.getText().length() > 0) {
                     if (i + 1 < mBox) {
-                        nextText = (EditText) getChildAt(i + 1);
+                        nextText = (EditTextCustomNew) getChildAt(i + 1);
                         nextText.requestFocus();
                         nextText.setText(KeyEventToString.getInstance().getStringFromEvent(keyCode));
                         nextText.setSelection(1);
@@ -276,13 +278,20 @@ public class VerificationCodeInputView extends ViewGroup {
      * 按下退格时返回清除并返回上一格EditText
      */
     private void backFocus() {
-        EditText editText;
+        EditTextCustomNew editText;
+        EditTextCustomNew nextEditText;
         for (int i = mBox - 1; i >= 0; i--) {
-            editText = (EditText) getChildAt(i);
+            editText = (EditTextCustomNew) getChildAt(i);
             if (editText != null && editText.getText().length() > 0) {
                 editText.requestFocus();
                 editText.setText("");
                 editText.setSelection(0);
+                if(i + 1 < mBox){
+                    nextEditText = (EditTextCustomNew) getChildAt(i+1);
+                    if(nextEditText != null){
+                        nextEditText.setFocus(false);
+                    }
+                }
                 return;
             }
         }
@@ -294,9 +303,9 @@ public class VerificationCodeInputView extends ViewGroup {
      * @param c 复制截取的文本
      */
     public void paste(CharSequence c) {
-        EditText editText;
+        EditTextCustomNew editText;
         for (int i = 0; i < mBox; i++) {
-            editText = (EditText) getChildAt(i);
+            editText = (EditTextCustomNew) getChildAt(i);
             editText.setText(String.valueOf(c.charAt(i)));
         }
     }
@@ -370,9 +379,9 @@ public class VerificationCodeInputView extends ViewGroup {
      * 清空验证码输入框，并且focus第一个输入框
      */
     public void restNullCode() {
-        EditText editText;
+        EditTextCustomNew editText;
         for (int i = mBox - 1; i >= 0; i--) {
-            editText = (EditText) getChildAt(i);
+            editText = (EditTextCustomNew) getChildAt(i);
             editText.setText("");
         }
         getChildAt(0).requestFocus();

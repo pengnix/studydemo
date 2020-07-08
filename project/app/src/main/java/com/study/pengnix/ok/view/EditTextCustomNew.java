@@ -112,7 +112,7 @@ public class EditTextCustomNew extends AppCompatEditText {
     public void onFocusChanged(boolean focused, int direction, Rect previouslyFocusedRect) {
         super.onFocusChanged(focused, direction, previouslyFocusedRect);
         if (!hasCustomBg) {
-            setFocus(focused);
+//            setFocus(focused);
         } else {
             setBg(focused);
         };
@@ -138,8 +138,8 @@ public class EditTextCustomNew extends AppCompatEditText {
         // 通过画矩形的方式去控制下划线的宽度高度等 如果下划线高度只有1的话 会过细导致颜色不清晰，因此默认会加1px的高度
         if (!hasCustomBg) {
             canvas.drawRect(
-                    0f, this.getMeasuredHeight() + mSpacing, (this.getMeasuredWidth() + this.getScrollX()),
-                    this.getMeasuredHeight() + mSpacing + mHeight, mPaint
+                    0f, this.getMeasuredHeight() - mSpacing, (this.getMeasuredWidth() + this.getScrollX()),
+                    this.getMeasuredHeight() - mSpacing + mHeight, mPaint
             );
         }
     }
