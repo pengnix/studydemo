@@ -180,7 +180,7 @@ public class VerificationCodeInputView extends ViewGroup {
 
             editText.setCursor(mCursor);
             editText.setTextColor(mTextColor);
-            editText.setTypeface(Typeface.DEFAULT_BOLD);
+//            editText.setTypeface(Typeface.DEFAULT_BOLD);
             editText.setLayoutParams(params);
             editText.setGravity(Gravity.CENTER);
             editText.setFilters(new InputFilter[]{new InputFilter.LengthFilter(1)});
