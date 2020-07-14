@@ -31,6 +31,7 @@
         <activity android:name=".activity.VerficationCodeActivity" />
         <activity android:name=".activity.VerficationCodeActivity2" />
         <activity android:name=".activity.EditTextActivity" />
+        <activity android:name=".activity.ThreadActivity" />
 
     </application>
 

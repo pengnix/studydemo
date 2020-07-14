@@ -59,6 +59,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/jump_to_edit_layout" />
+        <Button
+            android:id="@+id/jump2_thread_layout_demo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/jump_to_thread_layout" />
     </LinearLayout>
 
 
