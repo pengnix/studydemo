@@ -1,8 +1,6 @@
 package com.study.pengnix.ok.activity;
 
 import android.os.Bundle;
-import android.widget.LinearLayout;
-import android.widget.ScrollView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,7 +19,7 @@ public class ThreadActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_thread_demo);
+        setContentView(R.layout.activity_thread_layout_demo);
     }
 
     void test(){
