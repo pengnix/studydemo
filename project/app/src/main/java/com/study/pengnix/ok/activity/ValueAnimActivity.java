@@ -1,5 +1,6 @@
 package com.study.pengnix.ok.activity;
 
+import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
 import android.os.Bundle;
 import android.util.Log;
@@ -14,6 +15,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.study.pengnix.ok.R;
+import com.study.pengnix.ok.view.SectorView;
 
 public class ValueAnimActivity extends AppCompatActivity {
 
@@ -46,5 +48,17 @@ public class ValueAnimActivity extends AppCompatActivity {
             }
         });
         animator.start();
+    }
+
+    ObjectAnimator anim4;
+
+
+    public void startAnim4(View view) {
+        final SectorView sectorView = (SectorView)findViewById(R.id.sector_view);
+        anim4 = ObjectAnimator.ofFloat(sectorView, "fraction", 0, 1);
+        anim4.setDuration(4000);
+        anim4.setRepeatCount(ValueAnimator.INFINITE);
+        anim4.setRepeatMode(ValueAnimator.RESTART);
+        anim4.start();
     }
 }

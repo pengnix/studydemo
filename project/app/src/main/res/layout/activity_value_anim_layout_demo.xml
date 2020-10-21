@@ -28,4 +28,15 @@
         android:layout_height="wrap_content"
         android:text="开始动画"
         android:id="@+id/tween_btn1"/>
+
+    <com.study.pengnix.ok.view.SectorView
+        android:id="@+id/sector_view"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="startAnim4"
+        android:text="开始动画"/>
 </LinearLayout>
