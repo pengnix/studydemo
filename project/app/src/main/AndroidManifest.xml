@@ -34,6 +34,7 @@
         <activity android:name=".activity.EditTextActivity" />
         <activity android:name=".activity.ThreadActivity" />
         <activity android:name=".activity.TweenActivity" />
+        <activity android:name=".activity.ValueAnimActivity" />
 
     </application>
 

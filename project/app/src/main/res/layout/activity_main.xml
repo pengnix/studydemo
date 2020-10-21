@@ -69,6 +69,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/jump_to_tween_layout" />
+        <Button
+            android:id="@+id/jump2_value_layout_demo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/jump_to_value_layout" />
     </LinearLayout>
 
 

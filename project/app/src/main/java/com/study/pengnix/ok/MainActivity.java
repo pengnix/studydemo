@@ -13,6 +13,7 @@ import com.study.pengnix.ok.activity.MediaPlayerActivity;
 import com.study.pengnix.ok.activity.SecondListActivity;
 import com.study.pengnix.ok.activity.ThreadActivity;
 import com.study.pengnix.ok.activity.TweenActivity;
+import com.study.pengnix.ok.activity.ValueAnimActivity;
 import com.study.pengnix.ok.activity.VerficationCodeActivity;
 import com.study.pengnix.ok.activity.VerficationCodeActivity2;
 import com.study.pengnix.ok.activity.VideoActivity;
@@ -42,7 +43,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.jump2_edit_text_layout_demo).setOnClickListener(this);
         findViewById(R.id.jump2_thread_layout_demo).setOnClickListener(this);
         findViewById(R.id.jump2_tween_layout_demo).setOnClickListener(this);
-
+        findViewById(R.id.jump2_value_layout_demo).setOnClickListener(this);
     }
 
     @Override
@@ -81,6 +82,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.jump2_tween_layout_demo:
                 intent = new Intent(MainActivity.this, TweenActivity.class);
+                break;
+            case R.id.jump2_value_layout_demo:
+                intent = new Intent(MainActivity.this, ValueAnimActivity.class);
                 break;
         }
         startActivity(intent);
