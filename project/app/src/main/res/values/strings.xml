@@ -19,5 +19,6 @@
     <string name="jump_to_code2_layout">vericationCode2</string>
     <string name="jump_to_edit_layout">软键盘弹出整体上移</string>
     <string name="jump_to_thread_layout">thread</string>
+    <string name="jump_to_tween_layout">tween</string>
 
 </resources>
