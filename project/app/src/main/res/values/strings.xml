@@ -21,5 +21,7 @@
     <string name="jump_to_thread_layout">thread</string>
     <string name="jump_to_tween_layout">tween</string>
     <string name="jump_to_value_layout">属性动画</string>
+    <string name="jump_to_path_layout">曲线动画</string>
+
 
 </resources>

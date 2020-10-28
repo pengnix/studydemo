@@ -35,6 +35,7 @@
         <activity android:name=".activity.ThreadActivity" />
         <activity android:name=".activity.TweenActivity" />
         <activity android:name=".activity.ValueAnimActivity" />
+        <activity android:name=".activity.PathAnimActivity" />
 
     </application>
 

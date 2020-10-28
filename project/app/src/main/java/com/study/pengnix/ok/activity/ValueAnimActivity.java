@@ -2,6 +2,7 @@ package com.study.pengnix.ok.activity;
 
 import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
+import android.graphics.Path;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -51,7 +52,6 @@ public class ValueAnimActivity extends AppCompatActivity {
     }
 
     ObjectAnimator anim4;
-
 
     public void startAnim4(View view) {
         final SectorView sectorView = (SectorView)findViewById(R.id.sector_view);
