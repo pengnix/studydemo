@@ -6,6 +6,8 @@ import android.graphics.Path;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.AccelerateInterpolator;
+import android.view.animation.Interpolator;
+import android.view.animation.OvershootInterpolator;
 import android.widget.ImageView;
 
 import androidx.annotation.Nullable;
@@ -39,6 +41,7 @@ public class PathAnimActivity extends AppCompatActivity {
         path.quadTo(screenWidth - 300, 200, screenWidth - 100, screenHeight - 600);
 
         ObjectAnimator animator = ObjectAnimator.ofFloat(iv, View.X, View.Y, path);
+        animator.setInterpolator(new OvershootInterpolator());
         animator.setDuration(2000);
         animator.setRepeatCount(1);
         animator.setRepeatMode(ValueAnimator.REVERSE);
