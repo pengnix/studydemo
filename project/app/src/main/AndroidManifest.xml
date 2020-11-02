@@ -36,6 +36,7 @@
         <activity android:name=".activity.TweenActivity" />
         <activity android:name=".activity.ValueAnimActivity" />
         <activity android:name=".activity.PathAnimActivity" />
+        <activity android:name=".activity.FrameAnimActivity" />
 
     </application>
 

@@ -79,6 +79,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/jump_to_path_layout" />
+        <Button
+            android:id="@+id/jump2_frame_layout_demo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/jump_to_frame_layout" />
     </LinearLayout>
 
 
