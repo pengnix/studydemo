@@ -48,6 +48,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.jump2_value_layout_demo).setOnClickListener(this);
         findViewById(R.id.jump2_path_layout_demo).setOnClickListener(this);
         findViewById(R.id.jump2_frame_layout_demo).setOnClickListener(this);
+        findViewById(R.id.jump2_activity_layout_demo).setOnClickListener(this);
     }
 
     @Override
@@ -96,6 +97,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.jump2_frame_layout_demo:
                 intent = new Intent(MainActivity.this, FrameAnimActivity.class);
                 break;
+            case R.id.jump2_activity_layout_demo:
+                intent = new Intent(MainActivity.this, FrameAnimActivity.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.slide_right_in, R.anim.slide_left_out);
+                return;
         }
         startActivity(intent);
     }
