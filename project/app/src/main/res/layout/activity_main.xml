@@ -10,80 +10,135 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="50dp"
+        android:layout_marginLeft="20dp"
         android:orientation="vertical">
 
-        <Button
-            android:id="@+id/jump2_coordinator_layout_demo"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/jump_to_coordinator_layout" />
+            android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/jump2_collapsing_toolbar_layout_demo"
-            android:layout_width="wrap_content"
+            <Button
+                android:id="@+id/jump2_coordinator_layout_demo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/jump_to_coordinator_layout" />
+
+            <Button
+                android:id="@+id/jump2_collapsing_toolbar_layout_demo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/jump_to_collapsing_toolbar_layout" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/jump_to_collapsing_toolbar_layout" />
-        <Button
-            android:id="@+id/jump2_constraint_layout_demo"
-            android:layout_width="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/jump2_constraint_layout_demo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/jump_to_constraint_layout" />
+
+            <Button
+                android:id="@+id/jump2_video_layout_demo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/jump_to_video_layout" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/jump_to_constraint_layout" />
-        <Button
-            android:id="@+id/jump2_video_layout_demo"
-            android:layout_width="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/jump2_video_download_layout_demo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/jump_to_video_download_layout" />
+
+            <Button
+                android:id="@+id/jump2_second_layout_demo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/jump_to_second_layout" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/jump_to_video_layout" />
-        <Button
-            android:id="@+id/jump2_video_download_layout_demo"
-            android:layout_width="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/jump2_code_layout_demo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/jump_to_code_layout" />
+
+            <Button
+                android:id="@+id/jump2_code2_layout_demo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/jump_to_code2_layout" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/jump_to_video_download_layout" />
-        <Button
-            android:id="@+id/jump2_second_layout_demo"
-            android:layout_width="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/jump2_edit_text_layout_demo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/jump_to_edit_layout" />
+
+            <Button
+                android:id="@+id/jump2_thread_layout_demo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/jump_to_thread_layout" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/jump_to_second_layout" />
-        <Button
-            android:id="@+id/jump2_code_layout_demo"
-            android:layout_width="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/jump2_tween_layout_demo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/jump_to_tween_layout" />
+
+            <Button
+                android:id="@+id/jump2_value_layout_demo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/jump_to_value_layout" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/jump_to_code_layout" />
-        <Button
-            android:id="@+id/jump2_code2_layout_demo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/jump_to_code2_layout" />
-        <Button
-            android:id="@+id/jump2_edit_text_layout_demo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/jump_to_edit_layout" />
-        <Button
-            android:id="@+id/jump2_thread_layout_demo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/jump_to_thread_layout" />
-        <Button
-            android:id="@+id/jump2_tween_layout_demo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/jump_to_tween_layout" />
-        <Button
-            android:id="@+id/jump2_value_layout_demo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/jump_to_value_layout" />
-        <Button
-            android:id="@+id/jump2_path_layout_demo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/jump_to_path_layout" />
-        <Button
-            android:id="@+id/jump2_frame_layout_demo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/jump_to_frame_layout" />
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/jump2_path_layout_demo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/jump_to_path_layout" />
+
+            <Button
+                android:id="@+id/jump2_frame_layout_demo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/jump_to_frame_layout" />
+        </LinearLayout>
+
         <Button
             android:id="@+id/jump2_activity_layout_demo"
             android:layout_width="wrap_content"
