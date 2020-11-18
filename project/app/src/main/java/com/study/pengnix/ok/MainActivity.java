@@ -9,6 +9,7 @@ import com.study.pengnix.ok.activity.CollapsingToolbarLayoutDemoActivity;
 import com.study.pengnix.ok.activity.ConstraintLayoutDemoActivity;
 import com.study.pengnix.ok.activity.CoordinatorLayoutDemoActivity;
 import com.study.pengnix.ok.activity.EditTextActivity;
+import com.study.pengnix.ok.activity.FourAnimActivity;
 import com.study.pengnix.ok.activity.FrameAnimActivity;
 import com.study.pengnix.ok.activity.MediaPlayerActivity;
 import com.study.pengnix.ok.activity.PathAnimActivity;
@@ -49,6 +50,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.jump2_path_layout_demo).setOnClickListener(this);
         findViewById(R.id.jump2_frame_layout_demo).setOnClickListener(this);
         findViewById(R.id.jump2_activity_layout_demo).setOnClickListener(this);
+        findViewById(R.id.jump2_four_layout_demo).setOnClickListener(this);
     }
 
     @Override
@@ -102,6 +104,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(intent);
                 overridePendingTransition(R.anim.slide_right_in, R.anim.slide_left_out);
                 return;
+            case R.id.jump2_four_layout_demo:
+                intent = new Intent(MainActivity.this, FourAnimActivity.class);
+                break;
         }
         startActivity(intent);
     }

@@ -37,6 +37,8 @@
         <activity android:name=".activity.ValueAnimActivity" />
         <activity android:name=".activity.PathAnimActivity" />
         <activity android:name=".activity.FrameAnimActivity" />
+        <activity android:name=".activity.FourAnimActivity" />
+        <activity android:name=".activity.CActivity" />
 
     </application>
 
