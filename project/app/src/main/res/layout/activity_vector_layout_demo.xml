@@ -19,4 +19,13 @@
         android:scaleType="fitCenter"
         android:onClick="onTwitterClick"
         android:src="@drawable/heart_twitter" />
+    <ImageView
+        android:id="@+id/iv_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:contentDescription="@null"
+        android:scaleType="fitCenter"
+        android:onClick="onSearchBoxClick"
+        android:src="@drawable/animated_selected" />
 </LinearLayout>
