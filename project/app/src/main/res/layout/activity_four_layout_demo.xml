@@ -29,5 +29,40 @@
             android:layout_centerInParent="true"
             android:text="Fade"
             android:textSize="30sp" />
+        <Button
+            android:id="@+id/btn_share"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Share"
+            android:textSize="30sp" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <Button
+                android:id="@+id/fab_button"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:background="@mipmap/ic_launcher"
+                android:elevation="5dp"
+                android:onClick="explode"
+                android:transitionName="fab" />
+
+            <TextView
+                android:id="@+id/tx_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:text="Android"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="12dp"
+                android:elevation="5dp"
+                android:transitionName="user_name"
+                android:textColor="#353535"/>
+        </RelativeLayout>
     </LinearLayout>
+
 </LinearLayout>
