@@ -2,32 +2,9 @@ package com.study.pengnix.ok;
 
 import android.content.Intent;
 import android.os.Bundle;
-
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
-import com.study.pengnix.ok.activity.CollapsingToolbarLayoutDemoActivity;
-import com.study.pengnix.ok.activity.ConstraintLayoutDemoActivity;
-import com.study.pengnix.ok.activity.CoordinatorLayoutDemoActivity;
-import com.study.pengnix.ok.activity.EditTextActivity;
-import com.study.pengnix.ok.activity.FourAnimActivity;
-import com.study.pengnix.ok.activity.FrameAnimActivity;
-import com.study.pengnix.ok.activity.MediaPlayerActivity;
-import com.study.pengnix.ok.activity.PathAnimActivity;
-import com.study.pengnix.ok.activity.SecondListActivity;
-import com.study.pengnix.ok.activity.ThreadActivity;
-import com.study.pengnix.ok.activity.TweenActivity;
-import com.study.pengnix.ok.activity.ValueAnimActivity;
-import com.study.pengnix.ok.activity.VerficationCodeActivity;
-import com.study.pengnix.ok.activity.VerficationCodeActivity2;
-import com.study.pengnix.ok.activity.VideoActivity;
-import com.study.pengnix.ok.activity.VideoShowAfterDownloadActivity;
-
+import com.study.pengnix.ok.activity.*;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-
 import android.view.View;
-import android.view.Menu;
-import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -51,6 +28,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.jump2_frame_layout_demo).setOnClickListener(this);
         findViewById(R.id.jump2_activity_layout_demo).setOnClickListener(this);
         findViewById(R.id.jump2_four_layout_demo).setOnClickListener(this);
+        findViewById(R.id.jump2_vector_layout_demo).setOnClickListener(this);
     }
 
     @Override
@@ -106,6 +84,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 return;
             case R.id.jump2_four_layout_demo:
                 intent = new Intent(MainActivity.this, FourAnimActivity.class);
+                break;
+            case R.id.jump2_vector_layout_demo:
+                intent = new Intent(MainActivity.this, AnimVectorActivity.class);
                 break;
         }
         startActivity(intent);
