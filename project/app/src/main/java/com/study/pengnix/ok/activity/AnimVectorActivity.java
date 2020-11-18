@@ -18,16 +18,24 @@ import com.study.pengnix.ok.R;
 public class AnimVectorActivity extends AppCompatActivity {
 
     private static String TAG = "Code";
-    ImageView imgBtn;
+    ImageView imgBtn,iv2;
+    private boolean isTwitterChecked = false;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vector_layout_demo);
         imgBtn = findViewById(R.id.imgBtn);
+        iv2 = findViewById(R.id.iv_2);
     }
 
     public void startAnim(View view){
         Drawable drawable = imgBtn.getDrawable();
         ((Animatable) drawable).start();
+    }
+
+    public void onTwitterClick(View view) {
+        isTwitterChecked = !isTwitterChecked;
+        final int[] stateSet = {android.R.attr.state_checked * (isTwitterChecked ? 1 : -1)};
+        iv2.setImageState(stateSet, true);
     }
 }
