@@ -156,6 +156,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/jump_to_four_layout" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -167,11 +168,11 @@
                 android:layout_height="wrap_content"
                 android:text="@string/jump_to_vector_layout" />
 
-<!--            <Button-->
-<!--                android:id="@+id/jump2_four_layout_demo"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="@string/jump_to_four_layout" />-->
+            <Button
+                android:id="@+id/jump2_progress_layout_demo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/jump_to_code_vector_layout" />
         </LinearLayout>
     </LinearLayout>
 

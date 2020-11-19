@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.jump2_activity_layout_demo).setOnClickListener(this);
         findViewById(R.id.jump2_four_layout_demo).setOnClickListener(this);
         findViewById(R.id.jump2_vector_layout_demo).setOnClickListener(this);
+        findViewById(R.id.jump2_progress_layout_demo).setOnClickListener(this);
     }
 
     @Override
@@ -87,6 +88,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.jump2_vector_layout_demo:
                 intent = new Intent(MainActivity.this, AnimVectorActivity.class);
+                break;
+            case R.id.jump2_progress_layout_demo:
+                intent = new Intent(MainActivity.this, CustomSVGActivity2.class);
                 break;
         }
         startActivity(intent);
