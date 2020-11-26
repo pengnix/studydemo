@@ -41,6 +41,7 @@
         <activity android:name=".activity.CActivity" />
         <activity android:name=".activity.AnimVectorActivity" />
         <activity android:name=".activity.CustomSVGActivity2" />
+        <activity android:name=".activity.DrawPathActivity" />
     </application>
 
 </manifest>
