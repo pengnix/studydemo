@@ -232,6 +232,7 @@ public class SearchView extends View {
                 canvas.drawPath(path_search, mPaint);
                 break;
             case STARTING:
+            case ENDING:
                 mMeasure.setPath(path_search, false);
                 Path dst = new Path();
                 dst.rLineTo(0, 0);
@@ -251,15 +252,6 @@ public class SearchView extends View {
                 }
                 mMeasure.getSegment(start, end, dst2, true);
                 canvas.drawPath(dst2, mPaint);
-                break;
-            case ENDING:
-                mMeasure.setPath(path_search, false);
-                Path dst3 = new Path();
-                dst3.rLineTo(0, 0);
-                start = mMeasure.getLength() * mAnimatorValue;
-                end = mMeasure.getLength();
-                mMeasure.getSegment(start == end ? start - 0.01f : start, end, dst3, true);
-                canvas.drawPath(dst3, mPaint);
                 break;
         }
     }
