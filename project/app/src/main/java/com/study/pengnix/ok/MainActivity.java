@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import com.study.pengnix.ok.activity.*;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.util.Log;
 import android.view.View;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
@@ -98,5 +100,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
         }
         startActivity(intent);
+    }
+
+    @Override
+    public void onTrimMemory(int level) {
+        super.onTrimMemory(level);
+        Log.v("onTrimMemory","level="+level);
     }
 }
