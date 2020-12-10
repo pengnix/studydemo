@@ -5,7 +5,9 @@ import android.os.Bundle;
 import com.study.pengnix.ok.activity.*;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.util.ArrayMap;
 import android.util.Log;
+import android.util.SparseArray;
 import android.view.View;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
@@ -105,6 +107,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onTrimMemory(int level) {
         super.onTrimMemory(level);
-        Log.v("onTrimMemory","level="+level);
+        Log.v("checkMemory","onTrimMemory level="+level);
+    }
+
+    @Override
+    public void onLowMemory() {
+        super.onLowMemory();
+        Log.v("checkMemory","onLowMemory");
+        SparseArray<String> sp = new SparseArray<String>();
+        sp.clear();
+        ArrayMap<String,String> aMap = new ArrayMap<String,String>();
+        aMap.clear();
     }
 }
