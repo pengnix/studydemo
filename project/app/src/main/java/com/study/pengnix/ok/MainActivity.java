@@ -1,6 +1,8 @@
 package com.study.pengnix.ok;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import com.study.pengnix.ok.activity.*;
 import androidx.appcompat.app.AppCompatActivity;
@@ -118,5 +120,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         sp.clear();
         ArrayMap<String,String> aMap = new ArrayMap<String,String>();
         aMap.clear();
+        Bitmap b = null;
+
     }
 }
