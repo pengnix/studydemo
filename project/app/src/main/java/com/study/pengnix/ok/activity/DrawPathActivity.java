@@ -12,6 +12,9 @@ import android.widget.ImageView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.airbnb.lottie.LottieAnimationView;
+import com.airbnb.lottie.LottieComposition;
+import com.airbnb.lottie.OnCompositionLoadedListener;
 import com.study.pengnix.ok.R;
 import com.study.pengnix.ok.view.SearchView;
 
@@ -26,12 +29,24 @@ import com.study.pengnix.ok.view.SearchView;
 public class DrawPathActivity extends AppCompatActivity {
 
     private SearchView searchView;
+    private LottieAnimationView lav_show;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_draw_path);
         searchView = (SearchView)findViewById(R.id.searchview);
+        test();
+    }
+
+    public void test(){
+        lav_show = (LottieAnimationView) findViewById(R.id.animation_view);
+        LottieComposition.Factory.fromAssetFileName(getApplicationContext(), "data.json", new OnCompositionLoadedListener() {
+            @Override
+            public void onCompositionLoaded(@Nullable LottieComposition composition) {
+                lav_show.setComposition(composition);
+            }
+        });
     }
 
     public void startSearchView(View view) {
