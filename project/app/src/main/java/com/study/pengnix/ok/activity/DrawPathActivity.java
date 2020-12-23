@@ -41,12 +41,10 @@ public class DrawPathActivity extends AppCompatActivity {
 
     public void test(){
         lav_show = (LottieAnimationView) findViewById(R.id.animation_view);
-        LottieComposition.Factory.fromAssetFileName(getApplicationContext(), "data.json", new OnCompositionLoadedListener() {
-            @Override
-            public void onCompositionLoaded(@Nullable LottieComposition composition) {
-                lav_show.setComposition(composition);
-            }
-        });
+        //设置动画文件
+        lav_show.setAnimation("loadAnim.json");
+        //执行动画
+        lav_show.playAnimation();
     }
 
     public void startSearchView(View view) {
