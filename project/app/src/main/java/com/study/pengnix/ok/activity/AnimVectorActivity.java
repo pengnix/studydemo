@@ -7,6 +7,8 @@ import android.graphics.BitmapFactory;
 import android.graphics.drawable.Animatable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.os.Looper;
+import android.os.MessageQueue;
 import android.util.Pair;
 import android.view.View;
 import android.widget.Button;
@@ -61,5 +63,12 @@ public class AnimVectorActivity extends AppCompatActivity {
         options.inSampleSize = BitmapUtil.calculateInSampleSize(options, imgBtn
                 .getWidth(), imgBtn.getHeight());
         Bitmap newBitmap = BitmapFactory.decodeResource(getResources(), resId, options);
+        Looper.myQueue().addIdleHandler(new MessageQueue.IdleHandler() {
+            @Override
+            public boolean queueIdle() {
+                //do something
+                return false;//false 执行一次
+            }
+        });
     }
 }
