@@ -184,6 +184,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/jump_to_search_layout" />
+            <Button
+                android:id="@+id/jump2_video_rx_02_layout_demo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/jump_to_video_rx_layout" />
         </LinearLayout>
     </LinearLayout>
 

@@ -37,6 +37,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.jump2_vector_layout_demo).setOnClickListener(this);
         findViewById(R.id.jump2_progress_layout_demo).setOnClickListener(this);
         findViewById(R.id.jump2_search_layout_demo).setOnClickListener(this);
+        findViewById(R.id.jump2_video_rx_02_layout_demo).setOnClickListener(this);
+
     }
 
     @Override
@@ -101,6 +103,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.jump2_search_layout_demo:
                 intent = new Intent(MainActivity.this, DrawPathActivity.class);
+                break;
+            case R.id.jump2_video_rx_02_layout_demo:
+                intent = new Intent(MainActivity.this, VideoRxffActivity.class);
                 break;
         }
         startActivity(intent);
