@@ -17,7 +17,7 @@ import com.study.pengnix.ok.utils.Utils;
 /**
  * Created by Super on 2019/12/7.
  */
-public abstract class BaseFragment<V extends ViewDataBinding> extends Fragment {
+public abstract class VideoBaseFragment<V extends ViewDataBinding> extends Fragment {
 
     protected V binding;
 
@@ -59,13 +59,11 @@ public abstract class BaseFragment<V extends ViewDataBinding> extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
-//        StatService.onPageStart(getActivity(), getFragmentName());
     }
 
     @Override
     public void onPause() {
         super.onPause();
-//        StatService.onPageEnd(getActivity(), getFragmentName());
     }
 
     @Override

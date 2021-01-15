@@ -9,7 +9,7 @@ import android.view.View;
 import androidx.annotation.Nullable;
 
 import com.study.pengnix.ok.R;
-import com.study.pengnix.ok.databinding.FragmentFindBinding;
+import com.study.pengnix.ok.databinding.FragmentThirdVideoBinding;
 
 import io.microshow.rxffmpeg.player.MeasureHelper;
 import io.microshow.rxffmpeg.player.RxFFmpegPlayerControllerImpl;
@@ -19,7 +19,7 @@ import io.microshow.rxffmpeg.player.RxFFmpegPlayerView;
  * 发现
  * Created by Super on 2019/12/7.
  */
-public class FindFragment extends BaseFragment<FragmentFindBinding> implements View.OnClickListener {
+public class ThirdVideoFragment extends VideoBaseFragment<FragmentThirdVideoBinding> implements View.OnClickListener {
 
     private RxFFmpegPlayerView mPlayerView;
 
@@ -39,7 +39,7 @@ public class FindFragment extends BaseFragment<FragmentFindBinding> implements V
 
     @Override
     public int initContentView() {
-        return R.layout.fragment_find;
+        return R.layout.fragment_third_video;
     }
 
     @SuppressLint("SetTextI18n")
@@ -58,8 +58,8 @@ public class FindFragment extends BaseFragment<FragmentFindBinding> implements V
         //设置控制层容器 和 视频尺寸适配模式
         mPlayerView.setController(new RxFFmpegPlayerControllerImpl(getActivity()), MeasureHelper.FitModel.FM_FULL_SCREEN_WIDTH);
 
-        //静音模式
-        mPlayerView.setVolume(0);
+//        //静音模式
+//        mPlayerView.setVolume(0);
 
         //播放
         mPlayerView.play(binding.editText.getText().toString(), true);

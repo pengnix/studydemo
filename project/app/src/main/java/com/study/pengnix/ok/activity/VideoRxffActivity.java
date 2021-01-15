@@ -1,18 +1,12 @@
 package com.study.pengnix.ok.activity;
 
 import android.app.Dialog;
-import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.study.pengnix.ok.CircleProgressDialog;
 import com.study.pengnix.ok.R;
-import com.study.pengnix.ok.controller.CustomMediaController;
-import com.study.pengnix.ok.view.CustomVideoView;
 
 import io.microshow.rxffmpeg.player.RxFFmpegPlayerView;
 
@@ -26,7 +20,7 @@ public class VideoRxffActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_video_rx_demo);
+        setContentView(R.layout.activity_video_rx);
     }
 
 }
