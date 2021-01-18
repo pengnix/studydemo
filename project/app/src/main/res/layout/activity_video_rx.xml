@@ -1,11 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<!--<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent">-->
+<!--    <fragment android:name="com.study.pengnix.ok.fragment.ThirdVideoFragment"-->
+<!--        android:id="@+id/list"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_width="wrap_content"-->
+<!--         />-->
+<!--</FrameLayout>-->
+
+<com.sothree.slidinguppanel.SlidingUpPanelLayout xmlns:sothree="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sliding_layout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <fragment android:name="com.study.pengnix.ok.fragment.ThirdVideoFragment"
-        android:id="@+id/list"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    sothree:umanoPanelHeight="40dp"
+    sothree:umanoShadowHeight="4dp">
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_width="wrap_content"
-         />
-</FrameLayout>
+        android:gravity="center"
+        android:text="Main Content"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:gravity="center|top"
+        android:text="The Awesome Sliding Up Panel"
+        android:textSize="16sp" />
+</com.sothree.slidinguppanel.SlidingUpPanelLayout>

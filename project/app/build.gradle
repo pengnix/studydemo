@@ -60,4 +60,6 @@ dependencies {
 //    implementation 'com.github.cirno-poi:VerifyEditText:1.0.0'
     implementation 'com.airbnb.android:lottie:3.5.0'
 
+    implementation 'com.sothree.slidinguppanel:library:3.4.0'
+
 }
