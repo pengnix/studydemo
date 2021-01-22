@@ -11,7 +11,7 @@ public class DemoApp extends Application {
 
     @Override
     public void onCreate() {
-        initStrictMode();
+//        initStrictMode();
         super.onCreate();
         new Thread(new Runnable() {
             @Override
