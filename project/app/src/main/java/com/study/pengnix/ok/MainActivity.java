@@ -105,7 +105,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 intent = new Intent(MainActivity.this, DrawPathActivity.class);
                 break;
             case R.id.jump2_video_rx_02_layout_demo:
-                intent = new Intent(MainActivity.this, VideoRxffActivity.class);
+//                intent = new Intent(MainActivity.this, VideoRxffActivity.class);
+                intent = new Intent(MainActivity.this, VideoRxffActivity2.class);
+
                 break;
         }
         startActivity(intent);

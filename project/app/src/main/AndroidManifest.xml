@@ -44,6 +44,9 @@
         <activity android:name=".activity.CustomSVGActivity2" />
         <activity android:name=".activity.DrawPathActivity" />
         <activity android:name=".activity.VideoRxffActivity" />
+        <activity android:name=".activity.VideoRxffActivity2"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensor"/>
     </application>
 
 </manifest>

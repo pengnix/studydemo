@@ -10,7 +10,9 @@ import java.util.Date;
 public class TimeUtil {
     public static final int getServerTimestamp() {
         final HttpHandler httpHandler = new HttpHandler();
-        final String jsonStr = httpHandler.makeServiceCall("http://quan.suning.com/getSysTime.do");
+//        final String jsonStr = httpHandler.makeServiceCall("http://quan.suning.com/getSysTime.do");
+        final String jsonStr = httpHandler.makeServiceCall("https://yunbanktest.bankcomm.com:7099/hpbc_uat_web/homeParam/home_param.json");
+
 
         if (jsonStr != null) {
             try {

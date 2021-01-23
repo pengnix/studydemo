@@ -13,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.sothree.slidinguppanel.SlidingUpPanelLayout;
 import com.study.pengnix.ok.R;
+import com.study.pengnix.ok.utils.LoadVideoConfigUtil;
 import com.study.pengnix.ok.utils.TimeUtil;
 import com.study.pengnix.ok.utils.Utils;
 
@@ -44,9 +45,7 @@ public class VideoRxffActivity extends AppCompatActivity {
         main_content.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                new Thread(new Runnable() {
-                    @Override
-                    public void run() {
+
 //                        int time = TimeUtil.getServerTimestamp();
 //                        main_content.setText(""+time);
 
@@ -54,8 +53,8 @@ public class VideoRxffActivity extends AppCompatActivity {
                         Observable.create(new ObservableOnSubscribe<Integer>() {
                             @Override
                             public void subscribe(ObservableEmitter<Integer> emitter) throws Exception {
-                                Integer result = TimeUtil.getServerTimestamp();//PhotoUtils.saveFile(getBaseContext(), uri);
-                                emitter.onNext(result);
+                                String result = LoadVideoConfigUtil.getVideoConfig();//PhotoUtils.saveFile(getBaseContext(), uri);
+                                emitter.onNext(1);
                                 emitter.onComplete();
                             }
                         }).subscribeOn(Schedulers.io())
@@ -80,8 +79,8 @@ public class VideoRxffActivity extends AppCompatActivity {
                                     public void onComplete() {
                                     }
                                 });
-                    }
-                }).start();
+
+
 
             }
         });
