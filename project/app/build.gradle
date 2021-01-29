@@ -74,4 +74,9 @@ dependencies {
 
     implementation 'tv.danmaku.ijk.media:ijkplayer-exo:0.8.8'
 
+    compile project(':superplayerkit')
+
+    implementation "com.tencent.liteav:LiteAVSDK_Player:latest.release"
+    implementation 'com.github.ctiao:DanmakuFlameMaster:0.5.3'
+
 }

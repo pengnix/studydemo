@@ -14,6 +14,8 @@ import com.study.pengnix.ok.R;
 import com.study.pengnix.ok.utils.LoadVideoConfigUtil;
 import com.study.pengnix.ok.utils.Utils;
 import com.study.pengnix.ok.view.IjkVideoView;
+import com.tencent.liteav.demo.superplayer.SuperPlayerModel;
+import com.tencent.liteav.demo.superplayer.SuperPlayerView;
 
 import io.microshow.rxffmpeg.player.RxFFmpegPlayerView;
 import io.reactivex.Observable;
@@ -30,7 +32,7 @@ public class VideoRxffActivity2 extends AppCompatActivity {
 
     private static String TAG = "VideoActivity";
     private static String url = "http://jtyh-vod.homecdn.com/butelvod/d039207a-e61e-483d-b37d-7676831e3e2d.m3u8";
-    IjkVideoView mVideoView;
+    SuperPlayerView mSuperPlayerView;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -40,34 +42,12 @@ public class VideoRxffActivity2 extends AppCompatActivity {
     }
 
     void init(){
-        mVideoView = findViewById(R.id.gogogo1);
-        //初始化
-        IjkMediaPlayer.loadLibrariesOnce(null);
-        IjkMediaPlayer.native_profileBegin("libijkplayer.so");
-        //监听
-        mVideoView.setListener(new IjkVideoView.VideoPlayerListener() {
-            @Override
-            public void onPrepared(IMediaPlayer mp) {
-                //播放成功处理
-                mp.start();
-            }
+        mSuperPlayerView = findViewById(R.id.gogogo1);
+        SuperPlayerModel model = new SuperPlayerModel();
 
-            @Override
-            public void onCompletion(IMediaPlayer iMediaPlayer) {
-                Log.i("PlayerListener", "onCompletion");
-            }
+        model.url = url;
 
-            @Override
-            public boolean onError(IMediaPlayer mp, int what, int extra) {
-                Log.v("PlayerListener", "onError");
-                return true;
-//                ToastUtil.showDiffToastClose("播放失败");
-            }
-        });
-        //路径
-        mVideoView.setPath(url);
-        mVideoView.start();
-
+        mSuperPlayerView.playWithModel(model);
     }
 
 }
